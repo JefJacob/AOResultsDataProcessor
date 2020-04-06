@@ -158,7 +158,10 @@ namespace FileProcessor.Logic
                     String Team_Abbr = reader["Team_Abbr"].ToString();
                     String Reg_no = reader["Reg_no"].ToString();
                     String Ath_Sex = reader["Ath_Sex"].ToString();
-                    String Res_markDisplay =Regex.Replace(reader["Res_markDisplay"].ToString(), "[A-Za-z ]", "") ;
+                    String Res_markDisplay=reader["Res_markDisplay"].ToString();
+                    String[] rStatus={"DNF","DNS","DQ","FOUL","FS","NH","NT","SCR"};
+                    if(!rStatus.Contains(reader["Res_markDisplay"].ToString()))
+                    Res_markDisplay =Regex.Replace(reader["Res_markDisplay"].ToString(), "[A-Za-z ]", "") ;
                     String Res_wind = reader["Res_wind"].ToString();
                     String Res_place = reader["Res_place"].ToString();
 
