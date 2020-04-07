@@ -122,8 +122,16 @@ namespace FileProcessor.Logic
                             division = "70 Masters";
                         else if (Years < 80)
                             division = "75 Masters";
-                        else
+                        else if (Years < 85)
                             division = "80 Masters";
+                        else if (Years < 90)
+                           division = "85 Masters";
+                        else if (Years < 95)
+                           division = "90 Masters";
+                        else 
+                           division = "95 Masters";
+                        
+
                     }
                     if (reader["Event_name"].ToString().Contains("athlon"))//combined events
                     {
