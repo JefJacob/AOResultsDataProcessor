@@ -159,6 +159,7 @@ namespace FileProcessor.Logic
                         else
                             eventName = reader["Event_name"].ToString();
                     }
+                    if (eventName.Contains("Mile")) eventName=eventName.Replace(" Meters","");
                     eventName = eventName.Trim();
                     String Rnd_ltr = reader["Rnd_ltr"].ToString();
                     String First_name = reader["First_name"].ToString();
